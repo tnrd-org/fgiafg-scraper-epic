@@ -1,0 +1,56 @@
+﻿**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.project
+**/.settings
+**/.toolstarget
+**/.vs
+**/.vscode
+**/.idea
+**/*.*proj.user
+**/*.dbmdl
+**/*.jfm
+**/azds.yaml
+**/bin
+**/charts
+**/docker-compose*
+**/Dockerfile*
+**/node_modules
+**/npm-debug.log
+**/obj
+**/secrets.dev.yaml
+**/values.dev.yaml
+LICENSE
+README.md
+
+# .dockerignore
+
+# Ignore common build artifacts
+bin/
+obj/
+
+# Ignore NuGet package restore artifacts
+**/packages/
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.dll.refresh
+
+# Ignore Git-related files
+.git/
+.gitignore
+.gitattributes
+
+# Ignore Docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore IDEA files
+.idea/

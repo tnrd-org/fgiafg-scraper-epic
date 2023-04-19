@@ -136,11 +136,14 @@ internal class EpicGamesScraper
 
     private string GetImageUrl(Element element)
     {
-        KeyImage image = element.KeyImages.FirstOrDefault(x => x.Type == KeyImageType.DieselStoreFrontWide);
+        KeyImage? image = element.KeyImages.FirstOrDefault(x =>
+            x.Type.Equals("DieselStoreFrontWide", StringComparison.OrdinalIgnoreCase));
         if (image != null)
             return image.Url;
 
-        image = element.KeyImages.FirstOrDefault(x => x.Type == KeyImageType.OfferImageWide);
+        image = element.KeyImages.FirstOrDefault(x =>
+            x.Type.Equals("OfferImageWide", StringComparison.OrdinalIgnoreCase));
+
         if (image != null)
             return image.Url;
 
